@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates an uncommon error: unexpected behavior when using the `calc()` function with percentages and viewport units.  The intention is to create a sidebar that takes up 20% of the viewport width, and a main content area that occupies the remaining 80%. However, the calculation might not produce the expected result in certain browsers or situations.
+
+```css
+.sidebar {
+  width: calc(20% - 10px);
+  float: left;
+}
+
+.main {
+  width: calc(80% + 10px);
+  margin-left: 20%;
+}
+```
