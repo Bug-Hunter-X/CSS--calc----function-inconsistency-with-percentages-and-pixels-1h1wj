@@ -1,0 +1,16 @@
+To solve the issue, avoid directly subtracting pixels from percentages within the `calc()` function. A more reliable approach is to calculate the percentage-based widths and then handle the pixel adjustments separately using margins or padding.  Here's a corrected version:
+
+```css
+.sidebar {
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+}
+
+.main {
+  width: 80%;
+  margin-left: 22%; /* 20% + 10px/2 (half of the extra space) */
+}
+```
+
+This revised CSS ensures that the sidebar and main content areas consistently add up to the full viewport width, resolving the layout discrepancies caused by the original `calc()` implementation.
